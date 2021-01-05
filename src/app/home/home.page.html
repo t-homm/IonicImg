@@ -13,8 +13,19 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1"><ion-button (click)="dl()">表示</ion-button></ion-col>
+
+      </ion-row>
+      <ion-row>
+
+        <ion-col size="3"
+          *ngFor="let img of imgs; index as position">
+            <ion-img [src]="img"></ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-content>
